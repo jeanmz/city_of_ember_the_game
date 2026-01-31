@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgi1c058yxv6h"]
+
+[ext_resource type="AudioStream" uid="uid://30yjt2rsn2m5" path="res://assets/sounds/explosion.wav" id="2_kl8fp"]
+
+[node name="killzone" type="Area2D"]
+collision_mask = 3
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="death_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kl8fp")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

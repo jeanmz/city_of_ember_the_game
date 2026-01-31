@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbcwgp0vh6k7s"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7jurg"]
+distance = -3.0
+
+[node name="winzone" type="Area2D"]
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.0000044, 100)
+shape = SubResource("WorldBoundaryShape2D_7jurg")
