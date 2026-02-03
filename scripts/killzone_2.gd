@@ -5,8 +5,8 @@ extends Area2D
 
 
 func _on_body_entered(_body: Node2D) -> void:
-	print("You DIED!!")
 	death_sound.play()
+	print("You DIED!!")
 	timer.start()
 	
 
