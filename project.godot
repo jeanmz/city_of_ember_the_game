@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="the city of Ember"
-run/main_scene="uid://c4hlgb4c2a6op"
+run/main_scene="uid://bu7mhudaj8gub"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Music="*res://scenes/music.tscn"
-Global="*res://scripts/Global.gd"
 
 [display]
 
