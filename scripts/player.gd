@@ -24,12 +24,17 @@ func _ready() -> void:
 	
 	
 func _physics_process(delta: float) -> void:
+	
+	#print(Global.player_name)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
 	var elapsed_seconds = (Time.get_ticks_msec() - start_time)/1000.0
 	var y = (-1.0/200.0)*elapsed_seconds+1.0
+	
+	if y < 0:
+		y = 0
 	
 	#print(y)
 	point_light_2d.scale = Vector2(y,y)
@@ -42,7 +47,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		is_jumping = true
 		jump_audio.play()
-		animated_sprite_2d.play("jump")
+		if Global.player_name == "Doon":
+			animated_sprite_2d.play("jump2")
+		else:
+			animated_sprite_2d.play("jump_Lina")
 		timer.start()
 		#start_the_jump_anim_timer()
 		#print(await animated_sprite_2d.animation_finished)
@@ -60,10 +68,15 @@ func _physics_process(delta: float) -> void:
 		#print("jump")
 		var blah = 1
 	elif direction == 0:
-		animated_sprite_2d.play("idle")
+		if Global.player_name == "Doon":
+			animated_sprite_2d.play("idle2")
+		else:
+			animated_sprite_2d.play("idle_Lina")
 	else:
-		animated_sprite_2d.play("walk")
-	
+		if Global.player_name == "Doon":
+			animated_sprite_2d.play("walk2")	
+		else:
+			animated_sprite_2d.play("walk_Lina")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
