@@ -1,4 +1,5 @@
 extends Node2D
+@onready var clue: Panel = $clue
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,3 +20,9 @@ func _on_start_pressed() -> void:
 func _on_play_as_lina_pressed() -> void:
 	Global.player_name = "Lina"
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	
+
+
+
+func _on_clue_pressed() -> void:
+	clue.visible = true
