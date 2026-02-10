@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4hlgb4c2a6op"]
+[gd_scene load_steps=6 format=3 uid="uid://c4hlgb4c2a6op"]
 
 [ext_resource type="Script" uid="uid://d3tkhmw2jsras" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://dt5fdq81aefji" path="res://assets/coe.jpeg" id="1_l6cm7"]
 [ext_resource type="Script" uid="uid://fo7m6pmvu8vx" path="res://scripts/texture_rect.gd" id="3_wu84c"]
+[ext_resource type="FontFile" uid="uid://cgn3h5bg6pu50" path="res://assets/PixelOperator8.ttf" id="4_wu84c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
 bg_color = Color(0, 0, 0, 1)
@@ -46,6 +47,8 @@ offset_left = 35.999996
 offset_top = 136.8
 offset_right = 169.0
 offset_bottom = 167.8
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 11
 text = "START AS DOON"
 
 [node name="play_as_Lina" type="Button" parent="button_manager"]
@@ -54,6 +57,8 @@ offset_left = -130.0
 offset_top = 136.59999
 offset_right = -9.0
 offset_bottom = 167.59999
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 11
 text = "START AS LINA"
 
 [node name="clue" type="Button" parent="button_manager"]
@@ -62,14 +67,15 @@ offset_left = 101.79999
 offset_top = 24.8
 offset_right = 149.79999
 offset_bottom = 55.8
+theme_override_fonts/font = ExtResource("4_wu84c")
 text = "CLUE"
 
 [node name="clue" type="Panel" parent="."]
 visible = false
 offset_left = 109.0
-offset_top = 155.0
+offset_top = 98.0
 offset_right = 1811.0
-offset_bottom = 1106.0
+offset_bottom = 944.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_bqqt6")
 
 [node name="Label" type="Label" parent="clue"]
@@ -78,6 +84,7 @@ offset_left = 154.99998
 offset_right = 464.0
 offset_bottom = 188.19998
 scale = Vector2(5, 5)
+theme_override_fonts/font = ExtResource("4_wu84c")
 text = "
 To find the way out of Ember you have to find the exclamation mark and go down the ladder. Otherwise, the darkness will swallow you!"
 autowrap_mode = 2

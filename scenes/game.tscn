@@ -212,7 +212,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 blend_mode = 1
 
 [node name="killzone2" parent="." instance=ExtResource("3_lnu2h")]
