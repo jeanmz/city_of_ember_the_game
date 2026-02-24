@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 		
 	var elapsed_seconds = (Time.get_ticks_msec() - start_time)/1000.0
-	var y = 5* (-1.0/200.0)*elapsed_seconds+1.0
+	var y = 1* (-1.0/200.0)*elapsed_seconds+1.0
 	
 	if y < 0:
 		y = 0
@@ -65,8 +65,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = true
 		
 	if is_jumping: 
-		#print("jump")
-		var blah = 1
+		print("jump")
 	elif direction == 0:
 		if Global.player_name == "Doon":
 			animated_sprite_2d.play("idle2")

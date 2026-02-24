@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdlx56ajhnn6a"]
+
+[ext_resource type="Texture2D" uid="uid://bif4w7qwlkigl" path="res://assets/boat.png" id="1_0063d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0063d"]
+radius = 70.0
+height = 779.99994
+
+[sub_resource type="Gradient" id="Gradient_qlg0r"]
+offsets = PackedFloat32Array(0, 0.7082768)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0063d"]
+gradient = SubResource("Gradient_qlg0r")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="boat" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_0063d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.552715e-15, 3)
+rotation = 1.5707964
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CapsuleShape2D_0063d")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -40)
+texture = SubResource("GradientTexture2D_0063d")
+texture_scale = 15.0
